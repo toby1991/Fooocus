@@ -39,11 +39,11 @@ ADD . /app/Fooocus
 
 RUN pip install -r requirements_versions.txt
 
-RUN mkdir -p /app/Fooocus/models/loras && wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_offset_example-lora_1.0.safetensors -O /app/Fooocus/models/loras/sd_xl_offset_example-lora_1.0.safetensors
-RUN mkdir -p /app/Fooocus/models/prompt_expansion/fooocus_expansion && wget https://huggingface.co/lllyasviel/misc/resolve/main/fooocus_expansion.bin -O /app/Fooocus/models/prompt_expansion/fooocus_expansion/pytorch_model.bin
+###RUN mkdir -p /app/Fooocus/models/loras && wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_offset_example-lora_1.0.safetensors -O /app/Fooocus/models/loras/sd_xl_offset_example-lora_1.0.safetensors
+###RUN mkdir -p /app/Fooocus/models/prompt_expansion/fooocus_expansion && wget https://huggingface.co/lllyasviel/misc/resolve/main/fooocus_expansion.bin -O /app/Fooocus/models/prompt_expansion/fooocus_expansion/pytorch_model.bin
 
-RUN wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0_0.9vae.safetensors -O /app/Fooocus/models/checkpoints/sd_xl_base_1.0_0.9vae.safetensors
-RUN wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0_0.9vae.safetensors -O /app/Fooocus/models/checkpoints/sd_xl_refiner_1.0_0.9vae.safetensors
+###RUN wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0_0.9vae.safetensors -O /app/Fooocus/models/checkpoints/sd_xl_base_1.0_0.9vae.safetensors
+###RUN wget https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0_0.9vae.safetensors -O /app/Fooocus/models/checkpoints/sd_xl_refiner_1.0_0.9vae.safetensors
 # COPY models/checkpoints/sd_xl_base_1.0_0.9vae.safetensors /app/Fooocus/models/checkpoints/sd_xl_base_1.0_0.9vae.safetensors
 # COPY models/checkpoints/sd_xl_refiner_1.0_0.9vae.safetensors /tmpdir/models/checkpoints/sd_xl_refiner_1.0_0.9vae.safetensors
 
