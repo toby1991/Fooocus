@@ -29,11 +29,13 @@ FROM python:3.9.18-bullseye
 
 
 
-RUN git clone --depth=1 https://github.com/lllyasviel/Fooocus.git /app/Fooocus
+#RUN git clone --depth=1 https://github.com/lllyasviel/Fooocus.git /app/Fooocus
 
 #RUN echo "torchvision==0.15.2" >> /app/Fooocus/requirements_versions.txt
 
 WORKDIR /app/Fooocus
+
+ADD . /app/Fooocus
 
 RUN pip install -r requirements_versions.txt
 
