@@ -55,7 +55,8 @@ def cuda_malloc():
     import cuda_malloc
 
 
-prepare_environment()
+#no need prepare for docker env
+#prepare_environment()
 
 clear_comfy_args()
 # cuda_malloc()
