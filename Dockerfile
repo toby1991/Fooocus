@@ -39,6 +39,8 @@ ADD . /app/Fooocus
 
 RUN pip install -r requirements_versions.txt
 
+RUN /app/Fooocus/download.sh
+
 ###RUN mkdir -p /app/Fooocus/models/loras && wget https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_offset_example-lora_1.0.safetensors -O /app/Fooocus/models/loras/sd_xl_offset_example-lora_1.0.safetensors
 ###RUN mkdir -p /app/Fooocus/models/prompt_expansion/fooocus_expansion && wget https://huggingface.co/lllyasviel/misc/resolve/main/fooocus_expansion.bin -O /app/Fooocus/models/prompt_expansion/fooocus_expansion/pytorch_model.bin
 

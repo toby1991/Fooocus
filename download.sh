@@ -1,6 +1,8 @@
 #!/bin/bash
 
 
+#export http_proxy="http://127.0.0.1:8080"
+#export https_proxy="http://127.0.0.1:8080"
 
 # define
 download_if_not_exists() {
@@ -10,9 +12,8 @@ download_if_not_exists() {
 
     if [ ! -f "$FILEPATH" ]; then
         echo "Downloading $FILENAME from $URL..."
-        wget -O- -e use_proxy=yes "$URL" -O "$FILEPATH"
-
-        wget "$URL" -O "$FILEPATH"
+        #wget -O- -e use_proxy=yes "$URL" -O "$FILEPATH"
+        wget -O- -e use_proxy=no "$URL" -O "$FILEPATH"
     else
         echo "File $FILENAME already exists at $FILEPATH!"
     fi
