@@ -16,7 +16,9 @@
 
 
 ################################################################
-FROM python:3.9.18-bullseye
+FROM python:3.10.13-bullseye
+
+RUN apt update && apt install -y vim
 
 #RUN cd /app/Fooocus && git checkout tags/1.0.35
 
@@ -51,6 +53,6 @@ RUN pip install -r requirements_versions.txt
 
 EXPOSE 7860
 
-#RUN python launch.py --listen 8888
+#RUN start.sh
 
 # docker run --rm -it -p 80:7860 fooocus:v1.0.35 python launch.py
