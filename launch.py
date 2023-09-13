@@ -26,7 +26,8 @@ def prepare_environment():
     print(f"Fooocus version: {fooocus_version.version}")
 
     comfyui_name = 'ComfyUI-from-StabilityAI-Official'
-    git_clone(comfy_repo, repo_dir(comfyui_name), "Inference Engine", comfy_commit_hash)
+    #git_clone(comfy_repo, repo_dir(comfyui_name), "Inference Engine", comfy_commit_hash)
+    # comment for vpn
     sys.path.append(os.path.join(script_path, dir_repos, comfyui_name))
 
     if REINSTALL_ALL or not is_installed("torch") or not is_installed("torchvision"):
